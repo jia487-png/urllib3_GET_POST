@@ -14,3 +14,18 @@ print('京东请求状态码：',r1.status)
 print('python请求状态码：',r2.status)
 print('百度请求状态码：',r3.status)
 ~~~~~~
+## 输出
+  京东请求状态码： 200
+  python请求状态码： 200
+  百度请求状态码： 200
+
+# POST.PY
+~~~~
+import urllib3    # 导入urllib3模块
+urllib3.disable_warnings()               # 关闭ssl警告
+url = 'https://www.httpbin.org/post'    # post请求测试地址
+params = {'name':'Jack','country':'中国','age':30}  # 定义字典类型的请求参数
+http = urllib3.PoolManager()             # 创建连接池管理对象
+r = http.request('POST',url,fields=params)    # 发送POST请求
+print('返回结果：',r.data.decode('utf-8'))
+~~~~
