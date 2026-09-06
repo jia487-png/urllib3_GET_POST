@@ -31,7 +31,8 @@ print('返回结果：',r.data.decode('utf-8'))
 ~~~~
 ## 输出  
 
-返回结果： {
+返回结果：    
+{
   "args": {}, 
   "data": "", 
   "files": {}, 
