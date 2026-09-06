@@ -29,3 +29,27 @@ http = urllib3.PoolManager()             # 创建连接池管理对象
 r = http.request('POST',url,fields=params)    # 发送POST请求
 print('返回结果：',r.data.decode('utf-8'))
 ~~~~
+## 输出  
+
+返回结果： {
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {
+    "age": "30", 
+    "country": "\u4e2d\u56fd", 
+    "name": "Jack"
+  }, 
+  "headers": {
+    "Accept-Encoding": "identity", 
+    "Content-Length": "307", 
+    "Content-Type": "multipart/form-data; boundary=7b2659137c805605268c8f6829d334bf", 
+    "Host": "www.httpbin.org", 
+    "User-Agent": "python-urllib3/2.5.0", 
+    "X-Amzn-Trace-Id": "Root=1-6a9d3974-1e496b4b74166d564e822817"
+  }, 
+  "json": null, 
+  "origin": "111.60.88.224", 
+  "url": "https://www.httpbin.org/post"
+}   
+
